@@ -1,0 +1,80 @@
+$body-color: #666;
+$body-bg: #fff;
+$border-radius: .4rem;
+$orange: #ED7135;
+$white: #fff;
+$grey: #EBEBEB;
+$light-grey: #EEEEEE;
+$border-color: $grey;
+$nav-link-padding-y: .5rem;
+$nav-link-padding-x: 12px;
+$nav-link-font-size: 16px;
+$nav-link-color: $body-color;
+$nav-link-hover-color: $orange;
+$nav-pills-border-radius: 8px;
+$nav-pills-link-active-color: $white;
+$nav-pills-link-active-bg: $orange;
+$headings-margin-bottom: 0;
+$headings-font-weight: 700;
+$headings-line-height: 1.5;
+$headings-color: #292929; 
+$dark_bg: #292929;
+$enable-negative-margins: true;
+
+// // Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "color-mode";
+@import "variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$custom-colors: (
+  "orange": $orange
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$card-border-radius: 8px;
+$card-inner-border-radius: 8px;
+$card-spacer-x: 1.45rem;
+$card-title-spacer-y: .2rem;
+$card-title-color: $headings-color;
+$card-cap-bg: rgba(var(--#{$prefix}body-color-rgb), 0);
+$card-cap-padding-y: 0;
+$card-cap-padding-x: 1rem;
+
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/transitions";
+
+.btn-orange {
+  @include button-variant($orange, $orange, $white, darken($orange, 5%), darken($orange, 5%), $white, $active-color: $white);
+  font-weight: bold;
+}
+.btn-out{
+  @include button-variant($white, $grey, $headings-color, $dark_bg, $dark_bg, $white, $active-background: $dark_bg);
+  border-width: 2px;
+  font-weight: bold;
+}
+
+@import "custom";
